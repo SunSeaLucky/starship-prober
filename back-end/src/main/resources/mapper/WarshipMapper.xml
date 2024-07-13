@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.warshipmanagement.mapper.WarshipMapper">
+    <delete id="deleteWarship" parameterType="map">
+        DELETE
+        FROM STARSHIP
+        WHERE ID = #{ID}
+    </delete>
+    <select id="findWarshipById" parameterType="map">
+        SELECT *
+        FROM STARSHIP
+        WHERE ID = #{ID}
+    </select>
+    <select id="findAllMyWarships" parameterType="map">
+        SELECT *
+        FROM USER_HAS_STARSHIP,
+             STARSHIP
+        WHERE USER_HAS_STARSHIP.USER_USERNAME = #{USERNAME}
+          AND USER_HAS_STARSHIP.STARSHIP_ID = STARSHIP.ID
+    </select>
+    <select id="findAllWarships">
+        SELECT *
+        FROM STARSHIP
+    </select>
+    <select id="findWarshipByName" parameterType="map" resultType="Warship">
+        SELECT *
+        FROM STARSHIP
+        WHERE NAME = #{NAME}
+    </select>
+
+    <insert id="buyWarship" parameterType="map">
+        INSERT INTO USER_HAS_STARSHIP(USER_USERNAME, STARSHIP_ID)
+        VALUES (#{USERNAME}, #{ID})
+    </insert>
+    <delete id="saleWarship" parameterType="map">
+        DELETE
+        FROM USER_HAS_STARSHIP
+        WHERE USER_USERNAME = #{USERNAME}
+          AND STARSHIP_ID = #{ID}
+    </delete>
+    <update id="updateWarship" parameterType="map">
+        UPDATE STARSHIP
+        SET DUTY_OFFICER = #{DUTY_OFFICER}
+        WHERE ID = #{ID}
+    </update>
+    <select id="findWarshipByWeapon" parameterType="map">
+        SELECT *
+        FROM STARSHIP
+        WHERE ID IN (SELECT STARSHIP_ID
+                     FROM STARSHIP_HAS_WEAPON
+                     WHERE WEAPON_CODE = #{CODE})
+    </select>
+</mapper>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.warshipmanagement.mapper.WeaponMapper">
+    <select id="queryAllWeapons" parameterType="map">
+        SELECT *
+        FROM WEAPON
+        WHERE CODE IN (SELECT STARSHIP_HAS_WEAPON_WEAPON_CODE
+                       FROM USER_HAS_STARSHIP_HAS_WEAPON
+                       WHERE STARSHIP_HAS_WEAPON_STARSHIP_ID IN (SELECT STARSHIP_ID
+                                                                 FROM USER_HAS_STARSHIP
+                                                                 WHERE USER_USERNAME = #{USERNAME})
+                         AND USER_USERNAME = #{USERNAME})
+    </select>
+
+    <select id="queryWeapon" parameterType="map">
+        SELECT *
+        FROM WEAPON
+        WHERE CODE = #{ID}
+    </select>
+
+    <select id="findWeaponByName" parameterType="map">
+        SELECT *
+        FROM WEAPON
+        WHERE NAME = #{NAME}
+    </select>
+
+    <update id="updateWeapon" parameterType="map">
+        UPDATE USER_HAS_STARSHIP_HAS_WEAPON
+        SET STARSHIP_HAS_WEAPON_STARSHIP_ID = #{UPDATEDWARSHIP}
+        WHERE USER_USERNAME = #{USERNAME}
+          AND STARSHIP_HAS_WEAPON_WEAPON_CODE = #{WEAPON}
+    </update>
+
+    <insert id="addRelationWeapon" parameterType="map">
+        INSERT INTO USER_HAS_STARSHIP_HAS_WEAPON
+        VALUES (#{USERNAME}, #{WARSHIP}, #{WEAPON})
+    </insert>
+
+    <delete id="deleteRelationWeapon" parameterType="map">
+        DELETE
+        FROM USER_HAS_STARSHIP_HAS_WEAPON
+        WHERE USER_USERNAME = #{USERNAME}
+          AND STARSHIP_HAS_WEAPON_STARSHIP_ID = #{WARSHIP}
+          AND STARSHIP_HAS_WEAPON_WEAPON_CODE = #{WEAPON};
+    </delete>
+</mapper>

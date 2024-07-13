@@ -1,0 +1,9 @@
+export const useCONST = () => {
+  const EXCEPTION_TIP = "系统发生排斥反应";
+  const EXCEPTION_NETWORK = "系统网络发生排斥";
+  const USERNAME_OR_PASSWORD_CANNOT_BE_NULL = "权限识别ID或密码不可为空！";
+  const LOGIN_SUCCESSFULLY = "探针注入成功";
+  const REGISTER_SUCCESSFULLY = "探针生成成功";
+  return { EXCEPTION_TIP, EXCEPTION_NETWORK, USERNAME_OR_PASSWORD_CANNOT_BE_NULL, LOGIN_SUCCESSFULLY, REGISTER_SUCCESSFULLY };
+};
+
