@@ -23,6 +23,9 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    TokenHelper tokenHelper;
+
     @PostMapping("/register")
     public Result requestMethodName(String username,
                                     String time,
@@ -57,7 +60,7 @@ public class UserController {
         claims.put("username", u.getUsername());
 
         return u == null ? Result.fail("Incorrect username or password!")
-                : Result.success(new String(TokenHelper.generateToken(claims)));
+                : Result.success(new String(tokenHelper.generateToken(claims)));
     }
 
     @GetMapping("getUser")

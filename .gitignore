@@ -130,6 +130,7 @@ coverage
 # Other files
 *.thm
 
+.env
 
 node_modules
 

@@ -33,7 +33,7 @@ const model = ref([
         label: '指挥官信息管理',
         items: [
             { label: '个人信息', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: 'NEW' },
-            { label: '指挥官管理', icon: 'pi pi-user', to: '/uikit/overlay' }
+            // { label: '指挥官管理', icon: 'pi pi-user', to: '/uikit/overlay' }
         ]
     },
     {
