@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2024-07-16T14:33:55.843Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="UqIIKqwNN4d3djpnkgfj" version="22.0.3" type="device">
+  <diagram name="Page-1" id="DxuoiOmHE6H7cWBTr0D7">
+    <mxGraphModel dx="1007" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YgPPnLIBfHWPBYryamOR-14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;" vertex="1" parent="1">
+          <mxGeometry x="170" y="100" width="540" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-1" value="User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B5739D;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="470" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-3" value="Auth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#67AB9F;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-6" value="InformationPage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#67AB9F;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-9" value="Starship" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#67AB9F;" vertex="1" parent="1">
+          <mxGeometry x="440" y="300" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-10" value="Information &amp;amp; Sale" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-11" value="Weapon Information" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="560" y="250" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-12" value="RegisterPage" style="rounded=1;whiteSpace=wrap;html=1;direction=south;fillColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="40" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-13" value="LoginPage" style="rounded=1;whiteSpace=wrap;html=1;direction=south;fillColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="200" y="180" width="40" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="YgPPnLIBfHWPBYryamOR-15" value="&lt;b&gt;Starship Frontend Structure&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="230" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

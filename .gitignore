@@ -127,6 +127,10 @@ coverage
 *.ps
 *.eps
 
+# Draw IO
+*.bkp
+*.dtmp
+
 # Other files
 *.thm
 
